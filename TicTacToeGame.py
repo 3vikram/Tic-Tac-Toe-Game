@@ -3,17 +3,22 @@ PlayerSymbols = ['X', 'O']
 GameMoves = 0
 WonPlayer = None
 GameMovesCounter = 9
+Position = None
 
 def TicTacToePlay():
     while (True):
         global GameMoves
         global WonPlayer
         global GameMovesCounter
+        global Position
         if GameMoves % 2 == 0:
             Player1 = 'X'
             print("Player {} turn".format(Player1))
             Position = int(input("Enter the Position for your input between (1 to 9): "+"\n"))
-            if (Position > 0) and (Position < 10):
+            if (Position > 0) and (Position < 10) and GamePositions[Position-1] in PlayerSymbols:
+                print("Please choose a different number Position as the other user has occupied that Position!")
+                continue
+            elif (Position > 0) and (Position < 10):
                 GameMoves += 1
                 WonPlayer = Player1
             else:
@@ -23,26 +28,25 @@ def TicTacToePlay():
             Player2 = 'O'
             print("Player {} turn".format(Player2))
             Position = int(input("Enter the Position for your input between (1 to 9): "+"\n"))
-            if (Position > 0) and (Position < 10):
+            if (Position > 0) and (Position < 10) and GamePositions[Position-1] in PlayerSymbols:
+                print("Please choose a different number Position as the other user has occupied that Position!")
+                continue
+            elif (Position > 0) and (Position < 10):
                 GameMoves += 1
                 WonPlayer = Player2
             else:
                 print("Please choose a number between 1-9 only!")
                 continue
-        if GamePositions[Position-1] not in PlayerSymbols:
-            GamePositions[Position-1] = WonPlayer
-            GameMovesCounter -= 1
-            TicTacToeBoard()
-            WinStatus = TicTacToeWinCheck()
-            if WinStatus == 1:
-                print("Player {} Won this game and you played Awesome!".format(WonPlayer))
-                break
-            elif GameMovesCounter == 0:
-                print("No Player won!")
-                break
-        else:
-            print("Please choose a different number Position as the other user has occupied that Position!")
-            continue
+        GamePositions[Position-1] = WonPlayer
+        GameMovesCounter -= 1
+        TicTacToeBoard()
+        WinStatus = TicTacToeWinCheck()
+        if WinStatus == 1:
+            print("Player {} Won this game and you played Awesome!".format(WonPlayer))
+            break
+        elif GameMovesCounter == 0:
+            print("No Player won!")
+            break
 
 
 def TicTacToeBoard():
