@@ -30,7 +30,6 @@ def TicTacToePlay():
                 print("Please choose a number between 1-9 only!")
                 continue
         if GamePositions[Position-1] not in PlayerSymbols:
-            print("Executed")
             GamePositions[Position-1] = WonPlayer
             GameMovesCounter -= 1
             TicTacToeBoard()
