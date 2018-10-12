@@ -7,28 +7,35 @@ def TicTacToePlay():
     while (True):
         global GameMoves
         global WonPlayer
+
         if GameMoves % 2 == 0:
             Player1 = 'X'
             print("Player {} turn".format(Player1))
-            GameMoves += 1
-            WonPlayer = Player1
+            position = int(input("Enter the position for your input between (1 to 9): "+"\n"))
+            if (position > 0) and (position < 10):
+                GameMoves += 1
+                WonPlayer = Player1
+            else:
+                print("Please choose a number between 1-9 only!")
+                continue
         elif GameMoves % 2 == 1:
             Player2 = 'O'
             print("Player {} turn".format(Player2))
-            GameMoves += 1
-            WonPlayer = Player2
-        position = int(input("Enter the position for your input between (1 to 9): "+"\n"))
-        if (position > 0 and position < 10) and GamePositions[position-1] not in PlayerSymbols:
+            position = int(input("Enter the position for your input between (1 to 9): "+"\n"))
+            if (position > 0) and (position < 10):
+                GameMoves += 1
+                WonPlayer = Player2
+            else:
+                print("Please choose a number between 1-9 only!")
+                continue
+        if GamePositions[position-1] not in PlayerSymbols:
+            print("Executed")
             GamePositions[position-1] = WonPlayer
             TicTacToeBoard()
             WinStatus = TicTacToeWinCheck()
             if WinStatus == 1:
                 print("Player {} Won this game and you played Awesome!".format(WonPlayer))
                 break
-            continue
-        elif position > 9:
-            print("Please choose a number between 1-9 only!")
-            continue
         else:
             print("Please choose a different number position as the other user has occupied that position!")
             continue
@@ -75,5 +82,6 @@ def TicTacToeWinCheck():
     elif GamePositions[2] == 'O' and GamePositions[5] == 'O' and GamePositions [8] == 'O':
         return 1
 
-GamePlay = TicTacToePlay()
+if __name__ == "__main__":
+    GamePlay = TicTacToePlay()
 
