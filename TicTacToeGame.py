@@ -49,37 +49,37 @@ def TicTacToeBoard():
     print(" {} | {} | {}".format(GamePositions[6] , GamePositions[7] , GamePositions[8]))
 
 def TicTacToeWinCheck():
-    if GamePositions[2] == 'X' and GamePositions[4] == 'X' and GamePositions [6] == 'X':
+    if GamePositions[2] == 'X' and GamePositions[4] == 'X' and GamePositions[6] == 'X':
         return 1
-    elif GamePositions[0] == 'X' and GamePositions[4] == 'X' and GamePositions [8] == 'X':
+    elif GamePositions[0] == 'X' and GamePositions[4] == 'X' and GamePositions[8] == 'X':
         return 1
-    elif GamePositions[0] == 'X' and GamePositions[1] == 'X' and GamePositions [2] == 'X':
+    elif GamePositions[0] == 'X' and GamePositions[1] == 'X' and GamePositions[2] == 'X':
         return 1
-    elif GamePositions[3] == 'X' and GamePositions[4] == 'X' and GamePositions [5] == 'X':
+    elif GamePositions[3] == 'X' and GamePositions[4] == 'X' and GamePositions[5] == 'X':
         return 1
-    elif GamePositions[6] == 'X' and GamePositions[7] == 'X' and GamePositions [8] == 'X':
+    elif GamePositions[6] == 'X' and GamePositions[7] == 'X' and GamePositions[8] == 'X':
         return 1
-    elif GamePositions[0] == 'X' and GamePositions[3] == 'X' and GamePositions [6] == 'X':
+    elif GamePositions[0] == 'X' and GamePositions[3] == 'X' and GamePositions[6] == 'X':
         return 1
-    elif GamePositions[1] == 'X' and GamePositions[4] == 'X' and GamePositions [7] == 'X':
+    elif GamePositions[1] == 'X' and GamePositions[4] == 'X' and GamePositions[7] == 'X':
         return 1
-    elif GamePositions[2] == 'X' and GamePositions[5] == 'X' and GamePositions [8] == 'X':
+    elif GamePositions[2] == 'X' and GamePositions[5] == 'X' and GamePositions[8] == 'X':
         return 1
-    elif GamePositions[2] == 'O' and GamePositions[4] == 'O' and GamePositions [6] == 'O':
+    elif GamePositions[2] == 'O' and GamePositions[4] == 'O' and GamePositions[6] == 'O':
         return 1
-    elif GamePositions[0] == 'O' and GamePositions[4] == 'O' and GamePositions [8] == 'O':
+    elif GamePositions[0] == 'O' and GamePositions[4] == 'O' and GamePositions[8] == 'O':
         return 1
-    elif GamePositions[0] == 'O' and GamePositions[1] == 'O' and GamePositions [2] == 'O':
+    elif GamePositions[0] == 'O' and GamePositions[1] == 'O' and GamePositions[2] == 'O':
         return 1
-    elif GamePositions[3] == 'O' and GamePositions[4] == 'O' and GamePositions [5] == 'O':
+    elif GamePositions[3] == 'O' and GamePositions[4] == 'O' and GamePositions[5] == 'O':
         return 1
-    elif GamePositions[6] == 'O' and GamePositions[7] == 'O' and GamePositions [8] == 'O':
+    elif GamePositions[6] == 'O' and GamePositions[7] == 'O' and GamePositions[8] == 'O':
         return 1
-    elif GamePositions[0] == 'O' and GamePositions[3] == 'O' and GamePositions [6] == 'O':
+    elif GamePositions[0] == 'O' and GamePositions[3] == 'O' and GamePositions[6] == 'O':
         return 1
-    elif GamePositions[1] == 'O' and GamePositions[4] == 'O' and GamePositions [7] == 'O':
+    elif GamePositions[1] == 'O' and GamePositions[4] == 'O' and GamePositions[7] == 'O':
         return 1
-    elif GamePositions[2] == 'O' and GamePositions[5] == 'O' and GamePositions [8] == 'O':
+    elif GamePositions[2] == 'O' and GamePositions[5] == 'O' and GamePositions[8] == 'O':
         return 1
 
 if __name__ == "__main__":
