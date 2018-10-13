@@ -1,3 +1,9 @@
+'''
+Tic-Tac-Toe Game is to be played between 2 players in turns
+Player 1 is tied with 'X' and to be used during gameplay
+Player 2 is tied with 'O' and to be used during gameplay
+'''
+
 GamePositions = [1,2,3,4,5,6,7,8,9]
 PlayerSymbols = ['X', 'O']
 GameMoves = 0
